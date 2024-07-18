@@ -1,0 +1,23 @@
+.main{
+    display: flex;
+}
+
+.user{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    border: solid 2px pink;
+
+ 
+}
+
+.sizeImg{
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+
+}
+.robot{
+    width: 50%;
+    border: solid 2px green;
+}
