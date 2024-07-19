@@ -1,23 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* color https://www.color-hex.com/color-palette/39111 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.targetH1{
+text-align: center;
+margin: 70px 0px;
+font-size: 40px;
+font-family: "Press Start 2P", system-ui;
+font-weight: 400;
+background: linear-gradient(#fc393e,#ff8829);
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+
+
 .main{
+    width: 90%;
     display: flex;
+    margin: auto;
+    justify-content: space-between;
 }
 
 .user{
-    width: 50%;
+    width: 48%;
     height: 400px;
     display: flex;
+    flex-direction: column;
     border: solid 2px pink;
-
- 
+    align-items: center;
+    justify-content: center;
+}
+.wrapImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .sizeImg{
     height: 200px;
-    width: 200px;
-    margin: 20px;
+    width: 28%;
+    margin: 10px;
 
 }
 .robot{
-    width: 50%;
+    width: 48%;
     border: solid 2px green;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.playerChoice{
+margin-bottom: 30px;
+    font-size: 20px;
+font-family: "Press Start 2P", system-ui;
+font-weight: 400;
+background: linear-gradient(#fc393e,#ff8829);
+-webkit-text-fill-color: transparent;
+background-clip: text;
 }
