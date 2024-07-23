@@ -46,6 +46,7 @@ background-clip: text;
     height: 200px;
     width: 28%;
     margin: 10px;
+    object-fit: cover;
 
 }
 .robot{
