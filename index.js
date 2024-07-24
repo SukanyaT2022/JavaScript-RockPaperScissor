@@ -1,4 +1,28 @@
 
+var round = 1
+var playerScore = 0
+var robotScore = 0
+function nextRound(){
+    round = round + 1; 
+    if(round == 5){
+        if(playerScore>robotScore){
+           document.getElementById('resultID').innerText = ('Player wins the match.')
+        }else if(  robotScore>playerScore){
+         document.getElementById('resultID').innerText = ('Robot wins the match.')
+        }else{
+     document.getElementById('resultID').innerText = ('The match ia a draw')
+        }
+    }else{
+        document.getElementById('round').innerText = 'Round '+ round
+        document.getElementById("rockID").style.visibility = 'visible'
+        document.getElementById("paperID").style.visibility = 'visible'
+        document.getElementById("scissorID").style.visibility = 'visible'
+    document.getElementById('robotID').src ='https://images.unsplash.com/photo-1527430253228-e93688616381?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9ib3R8ZW58MHx8MHx8fDA%3D'
+    }
+   
+}
+
+
 function makeRockImgShow(){
     document.getElementById("rockID").style.visibility = 'visible'
     document.getElementById("paperID").style.visibility = 'hidden'
@@ -39,30 +63,37 @@ document.getElementById('robotID').src = "https://images.unsplash.com/photo-1532
 
 function whoWin(player, robot){
     if(player == 1 && robot == 1){
-        alert('Draw!')
+       document.getElementById('winnerID').innerText = ('Draw!')
     }else if (player == 1 && robot == 2){
-        alert('Robot wins!')
+       document.getElementById('winnerID').innerText = ('Robot wins!')
+        robotScore += 1
     }else if (player == 1 && robot == 3){
-        alert('Player wins!')
+       document.getElementById('winnerID').innerText = ('Player wins!')
+        playerScore +=1
     }
     
     else if (player == 2 && robot == 1){
-        alert('Player wins!')
+       document.getElementById('winnerID').innerText = ('Player wins!')
+        playerScore +=1
     }else if (player == 2 && robot == 2){
-        alert('draw!')
+       document.getElementById('winnerID').innerText = ('draw!')
     }else if (player == 2 && robot == 3){
-        alert('Robot win!')
+       document.getElementById('winnerID').innerText = ('Robot win!')
+        robotScore += 1
     }
 
 
     else if (player == 3 && robot == 1){
-        alert('Robot wins!')
+       document.getElementById('winnerID').innerText = ('Robot wins!')
+        robotScore += 1
     }else if (player == 3 && robot == 2){
-        alert('Player wins!')
+       document.getElementById('winnerID').innerText = ('Player wins!')
+        playerScore +=1
     }else if (player == 3 && robot == 3){
-        alert('draw!')
+       document.getElementById('winnerID').innerText = ('draw!')
     }
-
-
+    document.getElementById('playerScoreID').innerText = "Player's score = " + playerScore
+    document.getElementById('robotScoreID').innerText = "Robot's score = " + robotScore
 }
+
 
