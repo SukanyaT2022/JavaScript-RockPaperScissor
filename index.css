@@ -17,31 +17,61 @@ background: linear-gradient(#fc393e,#ff8829);
 -webkit-text-fill-color: transparent;
 background-clip: text;
 }
+.targetAnimation{
+    height: 250px;
+    width:250px ;
+    border: 10px dotted orange;
+    border-radius: 100%;
+   animation: rotateDiv 10s linear infinite; 
+   position: absolute;
+   left: 41% ;
+   top: 20%;
+   z-index: -1;
+  
+}
+@keyframes rotateDiv {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 .wrapResult{
-width: 300px;
-height: 300px;
-background-color:green;
+width: 200px;
+height: 200px;
 padding: 20px;
 border-radius: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+margin: auto;
+}
+.nextRoundButton{
+    padding: 2px 5px;
+    border: 5px double orange;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 30px;
+}
+.nextRoundButton:hover{
+    background-color: orange;
 }
 
-
 .main{
-    width: 90%;
+    width: 95%;
     display: flex;
     margin: auto;
     justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
-
-
 
 .user{
     width: 48%;
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     border: solid 2px pink;
@@ -56,24 +86,27 @@ flex-direction: column;
 
 .sizeImg{
     height: 200px;
-    width: 28%;
+    width: 200px;
     margin: 10px;
     object-fit: cover;
-
+    border-radius: 100%;
+}
+.targetRobotImg{
+    height: 200px;
 }
 .robot{
     width: 48%;
     border: solid 2px green;
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 20px;
 
 }
 .playerChoice{
-margin-bottom: 30px;
-    font-size: 20px;
+margin-bottom: 0px;
+font-size: 20px;
 font-family: "Press Start 2P", system-ui;
 font-weight: 400;
 background: linear-gradient(#fc393e,#ff8829);

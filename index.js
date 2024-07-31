@@ -1,3 +1,4 @@
+const { Img } = require("@chakra-ui/react");
 
 var round = 1
 var playerScore = 0
@@ -49,7 +50,7 @@ function robotRandom() {
   var randomNum =  Math.floor(Math.random() * (3 - 1 + 1) + 1);
   if(randomNum==1){
     //rock
-    document.getElementById('robotID').src = "https://images.unsplash.com/photo-1444312645910-ffa973656eba?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm9ja3xlbnwwfHwwfHx8MA%3D%3D"
+    document.getElementById('robotID').src = "https://images.unsplash.com/photo-1458501534264-7d326fa0ca04?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cm9ja3xlbnwwfHwwfHx8MA%3D%3D"
   }else if(randomNum==2){
     //paper
 document.getElementById('robotID').src = "https://images.unsplash.com/photo-1532153955177-f59af40d6472?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBhcGVyfGVufDB8fDB8fHww" 
