@@ -7,6 +7,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 .targetH1 {
   text-align: center;
   margin: 70px 0px;
@@ -17,10 +21,10 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.mainSpiningWheel{
-width: 90%;
-position: relative;
-margin: auto;
+.mainSpiningWheel {
+  width: 90%;
+  position: relative;
+  margin: auto;
 }
 .targetAnimation {
   height: 250px;
@@ -31,9 +35,8 @@ margin: auto;
   position: absolute;
   left: 40.5%;
   top: 10%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   /* z-index: -1; */
-
 }
 @keyframes rotateDiv {
   0% {
@@ -74,36 +77,40 @@ margin: auto;
   margin-top: 120px;
   margin-bottom: 20px;
 }
-
+/* userbox side */
 .user {
   width: 47%;
-  height: 450px;
+  height: 400px;
   display: flex;
   flex-direction: column;
-  border: solid 2px pink;
+  border: solid 2px #fc483b;
+  border-radius: 20px;
   align-items: center;
   padding-top: 30px;
 }
 .wrapImg {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 .sizeImg {
   height: 150px;
   width: 150px;
   margin: 10px;
-  object-fit: contain;
-  border-radius: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 .targetRobotImg {
   height: 200px;
+  width: 200px;
 }
 .robot {
   width: 47%;
-  border: solid 2px green;
-  height: 450px;
+  border: solid 2px #ff8829;
+  border-radius: 20px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,4 +127,80 @@ margin: auto;
 }
 #resultID {
   background-color: #ff8829;
+}
+/* ipad pro max */
+@media screen and (max-width: 1024px) {
+  /* spin circle */
+  .targetAnimation {
+    left: 36%;
+    top: 30%;
+  }
+  .sizeImg {
+    height: 120px;
+    width: 120px;
+  }
+  .targetRobotImg {
+    height: 200px;
+    width: 200px;
+  }
+}
+/* ipad air */
+@media screen and (max-width: 992px) {
+    /* spin circle */
+    .targetAnimation {
+      left: 33%;
+      top: 30%;
+    }
+  .wrapImg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* userbox side */
+  .user {
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .robot {
+    height: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sizeImg {
+    height: 100px;
+    width: 100px;
+  }
+  .wrapImg {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+  }
+  .main {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .user {
+    width: 100%;
+  }
+  .robot {
+    width: 100%;
+    margin-top: 40px;
+   padding-bottom: 20px;
+   
+  }
+  .targetAnimation {
+    height: 200px;
+    width: 200px;
+    left: 22%;
+    top: 0%;
+  }
+  .targetH1 {
+    margin: 20px 0px;
+  
+  }
+  .wrapResult {
+    padding-top: 40px;
+  }
 }
