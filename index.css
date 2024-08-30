@@ -144,6 +144,16 @@ body {
     background-color: #15f6b7;
   }
 }
+/* reset button */
+#resetButtonId{
+  padding: 4px 15px;
+  border: 5px double orange;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  color: black;
+}
 
 /* ipad pro max */
 @media screen and (max-width: 1024px) {

@@ -2,7 +2,6 @@ var round = 1;
 var playerScore = 0;
 var robotScore = 0;
 function nextRoundClick() {
-
   if (round < 6) {
     round = round + 1;
     document.getElementById('round').innerText = 'Round ' + round;
@@ -23,7 +22,6 @@ function makeRockImgShow() {
   whoWin(1, robot); // checking who the winner player or robot- 1 is player choice and robot choice
   document.getElementById('nextButtonId').disabled = false;
   // after choose a choice then the button able to go to next round
-
 }
 function makePaperImgShow() {
   document.getElementById('rockID').style.visibility = 'hidden';
@@ -92,11 +90,33 @@ function whoWin(player, robot) {
 
   if (round == 6) {
     if (playerScore > robotScore) {
-      document.getElementById('resultID').innerText = 'Player wins the match.';
+      document.getElementById('resultID').innerText = 'Player wins the match!';
     } else if (robotScore > playerScore) {
-      document.getElementById('resultID').innerText = 'Robot wins the match.';
+      document.getElementById('resultID').innerText = 'Robot wins the match!';
     } else {
-      document.getElementById('resultID').innerText = 'The match is a draw';
+      document.getElementById('resultID').innerText = 'The match is a draw!';
     }
   }
+}
+
+function resetButtonFunc() {
+  round = 1;
+  playerScore = 0;
+  robotScore = 0;
+  document.getElementById('round').innerText = 'Round ' + round;
+  document.getElementById('rockID').style.visibility = 'visible';
+  document.getElementById('paperID').style.visibility = 'visible';
+  document.getElementById('scissorID').style.visibility = 'visible';
+  document.getElementById('robotID').src =
+    'https://images.unsplash.com/photo-1527430253228-e93688616381?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9ib3R8ZW58MHx8MHx8fDA%3D';
+  document.getElementById('nextButtonId').disabled = true; // click next round is disable
+
+  document.getElementById('resultID').innerText = '';
+
+  document.getElementById('playerScoreID').innerText =
+    "Player's score = " + playerScore;
+  document.getElementById('robotScoreID').innerText =
+    "Robot's score = " + robotScore;
+
+    document.getElementById('winnerID').innerText = 'Winner : ';
 }
